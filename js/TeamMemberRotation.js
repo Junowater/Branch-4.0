@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const memberName = member.name;
             const row = document.createElement('tr');
             const nameCell = document.createElement('td');
-            nameCell.textContent = member.name;
+            nameCell.innerHTML = `<span style="cursor:pointer; text-decoration:underline;" onclick="openModal('${member.name}')">${member.name}</span>`;
             row.appendChild(nameCell);
 
             allQuarters.forEach(quarter => {
